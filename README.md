@@ -1,11 +1,11 @@
 # Docker-LEMP
 
 ## About
-Docker setup for basic LEMP stack - Linux, Nginx, MariaDB, PHP.
+Docker setup for basic LEMP stack - Linux, Nginx, MySQL, PHP.
 
 ## Requirements
 
-Install <a href="https://www.docker.com/" target="_blank">Docker</a>.
+Install <a href="https://www.docker.com/">Docker</a>.
 
 ## Usage
 
