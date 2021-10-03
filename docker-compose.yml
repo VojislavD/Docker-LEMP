@@ -14,7 +14,7 @@ services:
     volumes:
       - ./app:/app
   mysql:
-    image: mariadb:latest
+    image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: 'secret'
       MYSQL_USER: 'docker'
