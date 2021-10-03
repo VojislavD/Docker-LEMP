@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: nginx:latest
+    image: nginx:1.20.1
     ports:
       - '3000:3000'
     volumes:
@@ -14,7 +14,7 @@ services:
     volumes:
       - ./app:/app
   mysql:
-    image: mysql:latest
+    image: mysql:8.0.26
     environment:
       MYSQL_ROOT_PASSWORD: 'secret'
       MYSQL_USER: 'docker'

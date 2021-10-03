@@ -7,3 +7,5 @@
     $row = $query->fetch();
 
     echo 'MySQL version: '. $row['Value'];
+
+    phpinfo();
