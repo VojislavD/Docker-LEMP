@@ -27,8 +27,8 @@ To run composer command use:
  
 Or you can create an alias:  
   
-`alias dc="docker run --rm -it -v $(pwd):/app -w /app/code $(basename $(pwd) | tr [:upper:] [:lower:])_php composer"`  
+`alias dr="docker run --rm -it -v $(pwd):/app -w /app/code $(basename $(pwd) | tr [:upper:] [:lower:])_php"`  
   
-Now you can run it with command: `dc <command>`
+Now you can run it with command: `dr composer <command>`
     
-For example, to see version of composer installed run this command: `dc --version`
+For example, to see version of composer installed run this command: `dr composer --version`
