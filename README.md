@@ -31,4 +31,5 @@ For example, to see version of composer installed run this command: `dr <PHP_IMA
 
 #### Note
 <PHP_IMAGE_NAME> with default configuration will be <FOLDER_NAME>_php.  
+  
 For example: `docker-lemp_php`
