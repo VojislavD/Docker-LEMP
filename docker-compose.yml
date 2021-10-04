@@ -1,18 +1,18 @@
 version: '3'
 services:
-  web:
+  nginx:
     image: nginx:1.20.1
     ports:
       - '3000:3000'
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
-      - ./app:/app
+      - ./config/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./code:/app
   php:
     build: 
       context: .
-      dockerfile: PHP.Dockerfile
+      dockerfile: ./config/php/phpconf.dockerfile
     volumes:
-      - ./app:/app
+      - ./code:/app
   mysql:
     image: mysql:8.0.26
     environment:
