@@ -23,11 +23,11 @@ Visit page http://localhost:3000
 ### Composer
 To run composer command use:  
   
-`docker run --rm -it -v $(pwd):/app -w /app/app $(basename $(pwd) | tr [:upper:] [:lower:])_php composer <command>`
+`docker run --rm -it -v $(pwd):/app -w /app/code $(basename $(pwd) | tr [:upper:] [:lower:])_php composer <command>`
  
 Or you can create an alias:  
   
-`alias dc=docker run --rm -it -v $(pwd):/app -w /app/app $(basename $(pwd) | tr [:upper:] [:lower:])_php composer"`  
+`alias dc="docker run --rm -it -v $(pwd):/app -w /app/code $(basename $(pwd) | tr [:upper:] [:lower:])_php composer"`  
   
 Now you can run it with command: `dc <command>`
     
