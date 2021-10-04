@@ -26,7 +26,9 @@ To run composer command use: `docker run --rm -it -v $(pwd):/app -w /app/app <PH
 Or you can create an alias: `alias dr="docker run --rm -it -v $(pwd):/app -w /app/app"`  
   
 Now you can run it with command: `dr <PHP_IMAGE_NAME> composer <command>`
-  
-  
     
 For example, to see version of composer installed run this command: `dr <PHP_IMAGE_NAME> composer --version`
+
+#### Note
+<PHP_IMAGE_NAME> with default configuration will be <FOLDER_NAME>_php.  
+For example: `docker-lemp_php`
