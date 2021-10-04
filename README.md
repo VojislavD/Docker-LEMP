@@ -21,15 +21,14 @@ Navigate to the project folder and run `docker-compose up`.
 Visit page http://localhost:3000
 
 ### Composer
-To run composer command use: `docker run --rm -it -v $(pwd):/app -w /app/app <PHP_IMAGE_NAME> composer <command>`
+To run composer command use:  
   
-Or you can create an alias: `alias dr="docker run --rm -it -v $(pwd):/app -w /app/app"`  
+`docker run --rm -it -v $(pwd):/app -w /app/app $(basename $(pwd) | tr [:upper:] [:lower:])_php composer <command>`
+ 
+Or you can create an alias:  
   
-Now you can run it with command: `dr <PHP_IMAGE_NAME> composer <command>`
+`alias dc=docker run --rm -it -v $(pwd):/app -w /app/app $(basename $(pwd) | tr [:upper:] [:lower:])_php composer"`  
+  
+Now you can run it with command: `dc <command>`
     
-For example, to see version of composer installed run this command: `dr <PHP_IMAGE_NAME> composer --version`
-
-#### Note
-<PHP_IMAGE_NAME> with default configuration will be <FOLDER_NAME>_php.  
-  
-For example: `docker-lemp_php`
+For example, to see version of composer installed run this command: `dc --version`
